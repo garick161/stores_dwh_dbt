@@ -8,19 +8,19 @@ with open("config.yml", "r") as file:
     config = yaml.safe_load(file)
 
 # Получение параметров подключения к базе данных
-SOURCE_DB_HOST = config["source_db"]["host"]
-SOURCE_DB_PORT = config["source_db"]["port"]
-SOURCE_DB_USER = config["source_db"]["user"]
-SOURCE_DB_PASSWORD = config["source_db"]["password"]
-SOURCE_DB_NAME = config["source_db"]["dbname"]
+TARGET_DB_HOST = config["target_db"]["host"]
+TARGET_DB_PORT = config["target_db"]["port"]
+TARGET_DB_USER = config["target_db"]["user"]
+TARGET_DB_PASSWORD = config["target_db"]["password"]
+TARGET_DB_NAME = config["target_db"]["dbname"]
 
 
 def get_loaded_date() -> str:
     """Функция для получения даты текущей загрузки"""
     try:
-        connection = psycopg2.connect(host=SOURCE_DB_HOST, port=SOURCE_DB_PORT, user=SOURCE_DB_USER, password=SOURCE_DB_PASSWORD, dbname=SOURCE_DB_NAME)
+        connection = psycopg2.connect(host=TARGET_DB_HOST, port=TARGET_DB_PORT, user=TARGET_DB_USER, password=TARGET_DB_PASSWORD, dbname=TARGET_DB_NAME)
         cursor = connection.cursor()
-        cursor.execute("SELECT MAX(calday) FROM public.bills_head;")
+        cursor.execute("SELECT MAX(calday) FROM store_sales.bills_head;")
         last_date = cursor.fetchone()[0]
 
     except Exception as e:
