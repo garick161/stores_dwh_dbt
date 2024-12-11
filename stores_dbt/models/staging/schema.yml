@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: postgres_db_source
+    database: stores_dwh
+    schema: stores_src    
+    tables:
+      - name: bills_item 
+        description: "Таблица с иформацией покупках, чеки и их наполнение"
+      - name: bills_head 
+        description: "Оношение номер магазина - номер чека - дата"
+      - name: traffic 
+        description: "Количество посещений магазина по часам"
+      - name: coupons 
+        description: "Информация по купонам"
+      - name: promos 
+        description: "Информация о текущих активных промоакциях"
+      - name: stores 
+        description: "Отношение код магазина - название магазина"
+      - name: promo_types 
+        description: "Информация типах промоакций"

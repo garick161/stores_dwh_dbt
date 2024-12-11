@@ -1,3 +1,11 @@
 venv/
 .pre-commit-config.yaml
 config.yml
+py_stripts/temp.ipynb
+
+
+# dbt specific
+stores_dbt/target/
+stores_dbt/dbt_packages/
+stores_dbt/logs/
+logs/
