@@ -22,7 +22,7 @@ models:
     description: "Дата операции"
 
 - name: bills_head
-  description: "Оношение номер магазина - номер чека - дата"
+  description: "{{ doc('bills_head_stg') }}"
   columns:
   - name: billnum
     description: "Номер чека"
@@ -32,7 +32,7 @@ models:
     description: "Дата операции"
 
 - name: traffic
-  description: "Количество посещений магазина по часам"
+  description: "{{ doc('traffic_stg') }}"
   columns:
   - name: plant
     description: "Индетификационный номер магазина"
@@ -46,7 +46,7 @@ models:
     description: "Количество посетителей"
 
 - name: coupons
-  description: "Информация по купонам"
+  description: "{{ doc('coupons_stg') }}"
   columns:
   - name: plant
     description: "Индетификационный номер магазина"
@@ -62,7 +62,7 @@ models:
     description: "Номер чека"
 
 - name: promos
-  description: "Информация о текущих активных промоакциях"
+  description: "{{ doc('promos_stg') }}"
   columns:
   - name: promo_id
     description: "Индетификационный номер промо акции"
@@ -76,7 +76,7 @@ models:
     description: "Величина скидки"
 
 - name: stores
-  description: "Отношение код магазина - название магазина"
+  description: "{{ doc('stores_stg') }}"
   columns:
   - name: plant
     description: "Индетификационный номер магазина"
@@ -84,9 +84,9 @@ models:
     description: "Название магазина"
 
 - name: promo_types
-  description: "Информация типах промоакций"
+  description: "{{ doc('promo_types_stg') }}"
   columns:
   - name: promo_type
     description: "Тип промо акции"
-  - name: text
+  - name: txt
     description: "Каким образом применяется скидка. Например, в абсолютном выражении или в относительном в виде процента скидки"
