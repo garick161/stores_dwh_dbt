@@ -45,21 +45,21 @@ models:
   - name: quantity
     description: "Количество посетителей"
 
-# - name: coupons
-#   description: "Информация по купонам"
-#   columns:
-#   - name: plant
-#     description: "Индетификационный номер магазина"
-#   - name: calday
-#     description: "Дата операции"
-#   - name: coupon_id
-#     description: "Индетификационный номер купона"
-#   - name: promo_id
-#     description: "Индетификационный номер промо акции"
-#   - name: material
-#     description: "Уникальный индетификатор товара"
-#   - name: billnum
-#     description: "Номер чека"
+- name: coupons
+  description: "Информация по купонам"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
+  - name: coupon_id
+    description: "Индетификационный номер купона"
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: billnum
+    description: "Номер чека"
 
 # - name: promos
 #   description: "Информация о текущих активных промоакциях"
