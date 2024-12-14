@@ -1,21 +1,92 @@
 version: 2
 
-sources:
-  - name: postgres_db_source
-    database: stores_dwh
-    schema: stores_src    
-    tables:
-      - name: bills_item 
-        description: "Таблица с иформацией покупках, чеки и их наполнение"
-      - name: bills_head 
-        description: "Оношение номер магазина - номер чека - дата"
-      - name: traffic 
-        description: "Количество посещений магазина по часам"
-      - name: coupons 
-        description: "Информация по купонам"
-      - name: promos 
-        description: "Информация о текущих активных промоакциях"
-      - name: stores 
-        description: "Отношение код магазина - название магазина"
-      - name: promo_types 
-        description: "Информация типах промоакций"
+models:
+- name: bills_item
+  description: "Таблица с иформацией покупках, чеки и их наполнение"
+  columns:
+  - name: billnum
+    description: "Номер чека"
+  - name: billitem
+    description: "Позиция в чеке. Одна позиция для одного товара 'material'"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: qty
+    description: "Количество"
+  - name: netval
+    description: "Стоимость без НДС"
+  - name: tax
+    description: "Добавленная стоимость"
+  - name: rpa_sat
+    description: "Стоимость с НДС"
+  - name: calday
+    description: "Дата операции"
+
+# - name: bills_head
+#   description: "Оношение номер магазина - номер чека - дата"
+#   columns:
+#   - name: billnum
+#     description: "Номер чека"
+#   - name: plant
+#     description: "Индетификационный номер магазина"
+#   - name: calday
+#     description: "Дата операции"
+
+# - name: traffic
+#   description: "Количество посещений магазина по часам"
+#   columns:
+#   - name: plant
+#     description: "Индетификационный номер магазина"
+#   - name: calday
+#     description: "Дата операции"
+#   - name: time
+#     description: "Время. Значения кратные часу от 8 до 21"
+#   - name: frame_id
+#     description: "Временной фрейм"
+#   - name: quantity
+#     description: "Количество посетителей"
+
+# - name: coupons
+#   description: "Информация по купонам"
+#   columns:
+#   - name: plant
+#     description: "Индетификационный номер магазина"
+#   - name: calday
+#     description: "Дата операции"
+#   - name: coupon_id
+#     description: "Индетификационный номер купона"
+#   - name: promo_id
+#     description: "Индетификационный номер промо акции"
+#   - name: material
+#     description: "Уникальный индетификатор товара"
+#   - name: billnum
+#     description: "Номер чека"
+
+# - name: promos
+#   description: "Информация о текущих активных промоакциях"
+#   columns:
+#   - name: promo_id
+#     description: "Индетификационный номер промо акции"
+#   - name: name
+#     description: "Название промо акции"
+#   - name: promo_type
+#     description: "Тип промо акции"
+#   - name: material
+#     description: "Уникальный индетификатор товара"
+#   - name: discount
+#     description: "Величина скидки"
+
+# - name: stores
+#   description: "Отношение код магазина - название магазина"
+#   columns:
+#   - name: plant
+#     description: "Индетификационный номер магазина"
+#   - name: txt
+#     description: "Название магазина"
+
+# - name: promo_types
+#   description: "Информация типах промоакций"
+#   columns:
+#   - name: promo_type
+#     description: "Тип промо акции"
+#   - name: text
+#     description: "Каким образом применяется скидка. Например, в обсолутном выражении или в относительном в виде процента скидки"
