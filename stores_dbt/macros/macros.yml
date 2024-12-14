@@ -1,0 +1,33 @@
+version: 2
+
+macros:
+- name: generate_schema_name
+  description: >
+    Служебный макрос. Позволяет использовать custom схему вместо указанной по умолчанию
+
+- name: update_load_info
+  description: >
+    Обновляет информацию о последней загрузки текущей таблицы. Макрос вызывается через `post-hook` при выполнении модели dbt в папке `staging`. Для подсчёта количества использует временную таблицу `table_name_tmp`, которую создает dbt. Обновление происходит по-разному для таблиц фактов и измерений (delta_load / full_load). Подробнее можно узнать в реализации макроса 
+  arguments:
+  - name: table_name
+    description: >
+      Имя таблицы
+    type: varchar
+
+- name: delta_load
+  description: >
+    Макрос для инкрементальной загрузки данных из источника на основе дельты (дата на источнике - дата в хранилище)
+  arguments:
+  - name: table_name
+    description: >
+      Имя таблицы
+    type: varchar
+
+- name: full_load
+  description: >
+    Макрос для полной загрузки данных из источника
+  arguments:
+  - name: table_name
+    description: >
+      Имя таблицы
+    type: varchar
