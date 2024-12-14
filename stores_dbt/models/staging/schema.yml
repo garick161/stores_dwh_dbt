@@ -31,19 +31,19 @@ models:
   - name: calday
     description: "Дата операции"
 
-# - name: traffic
-#   description: "Количество посещений магазина по часам"
-#   columns:
-#   - name: plant
-#     description: "Индетификационный номер магазина"
-#   - name: calday
-#     description: "Дата операции"
-#   - name: time
-#     description: "Время. Значения кратные часу от 8 до 21"
-#   - name: frame_id
-#     description: "Временной фрейм"
-#   - name: quantity
-#     description: "Количество посетителей"
+- name: traffic
+  description: "Количество посещений магазина по часам"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
+  - name: time
+    description: "Время. Значения кратные часу от 8 до 21"
+  - name: frame_id
+    description: "Временной фрейм"
+  - name: quantity
+    description: "Количество посетителей"
 
 # - name: coupons
 #   description: "Информация по купонам"
