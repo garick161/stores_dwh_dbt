@@ -2,7 +2,7 @@ version: 2
 
 models:
 - name: bills_item
-  description: "Таблица с иформацией покупках, чеки и их наполнение"
+  description: "{{ doc('bills_item_stg') }}"
   columns:
   - name: billnum
     description: "Номер чека"
