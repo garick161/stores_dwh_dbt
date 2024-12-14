@@ -21,15 +21,15 @@ models:
   - name: calday
     description: "Дата операции"
 
-# - name: bills_head
-#   description: "Оношение номер магазина - номер чека - дата"
-#   columns:
-#   - name: billnum
-#     description: "Номер чека"
-#   - name: plant
-#     description: "Индетификационный номер магазина"
-#   - name: calday
-#     description: "Дата операции"
+- name: bills_head
+  description: "Оношение номер магазина - номер чека - дата"
+  columns:
+  - name: billnum
+    description: "Номер чека"
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
 
 # - name: traffic
 #   description: "Количество посещений магазина по часам"
