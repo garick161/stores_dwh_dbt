@@ -3,7 +3,7 @@
 
 -- Сформируем запрос на получение последеней актуальной даты в целевой таблице
 {% set last_load_date_query %}
-select last_load_datetime 
+select last_datetime_dds 
 from {{ source('postgres_db_staging', 'table_load_info') }} 
 where table_name = '{{ table_name }}'
 {% endset %}

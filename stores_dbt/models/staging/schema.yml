@@ -61,19 +61,19 @@ models:
   - name: billnum
     description: "Номер чека"
 
-# - name: promos
-#   description: "Информация о текущих активных промоакциях"
-#   columns:
-#   - name: promo_id
-#     description: "Индетификационный номер промо акции"
-#   - name: name
-#     description: "Название промо акции"
-#   - name: promo_type
-#     description: "Тип промо акции"
-#   - name: material
-#     description: "Уникальный индетификатор товара"
-#   - name: discount
-#     description: "Величина скидки"
+- name: promos
+  description: "Информация о текущих активных промоакциях"
+  columns:
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: name
+    description: "Название промо акции"
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: discount
+    description: "Величина скидки"
 
 # - name: stores
 #   description: "Отношение код магазина - название магазина"
