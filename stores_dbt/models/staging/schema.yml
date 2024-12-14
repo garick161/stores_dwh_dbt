@@ -75,18 +75,18 @@ models:
   - name: discount
     description: "Величина скидки"
 
-# - name: stores
-#   description: "Отношение код магазина - название магазина"
-#   columns:
-#   - name: plant
-#     description: "Индетификационный номер магазина"
-#   - name: txt
-#     description: "Название магазина"
+- name: stores
+  description: "Отношение код магазина - название магазина"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: txt
+    description: "Название магазина"
 
-# - name: promo_types
-#   description: "Информация типах промоакций"
-#   columns:
-#   - name: promo_type
-#     description: "Тип промо акции"
-#   - name: text
-#     description: "Каким образом применяется скидка. Например, в обсолутном выражении или в относительном в виде процента скидки"
+- name: promo_types
+  description: "Информация типах промоакций"
+  columns:
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: text
+    description: "Каким образом применяется скидка. Например, в обсолутном выражении или в относительном в виде процента скидки"
