@@ -1,7 +1,5 @@
 version: 2
 
-description: "{{ doc('dds_schema_description') }}"
-
 models:
 - name: bills_item
   description: "{{ doc('bills_item_stg') }}"
@@ -63,19 +61,19 @@ models:
   - name: billnum
     description: "Номер чека"
 
-- name: promos
-  description: "{{ doc('promos_stg') }}"
-  columns:
-  - name: promo_id
-    description: "Индетификационный номер промо акции"
-  - name: name
-    description: "Название промо акции"
-  - name: promo_type
-    description: "Тип промо акции"
-  - name: material
-    description: "Уникальный индетификатор товара"
-  - name: discount
-    description: "Величина скидки"
+# - name: promos
+#   description: "{{ doc('promos_stg') }}"
+#   columns:
+#   - name: promo_id
+#     description: "Индетификационный номер промо акции"
+#   - name: name
+#     description: "Название промо акции"
+#   - name: promo_type
+#     description: "Тип промо акции"
+#   - name: material
+#     description: "Уникальный индетификатор товара"
+#   - name: discount
+#     description: "Величина скидки"
 
 - name: stores
   description: "{{ doc('stores_stg') }}"
