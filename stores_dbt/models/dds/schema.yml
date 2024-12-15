@@ -61,19 +61,21 @@ models:
   - name: billnum
     description: "Номер чека"
 
-# - name: promos
-#   description: "{{ doc('promos_stg') }}"
-#   columns:
-#   - name: promo_id
-#     description: "Индетификационный номер промо акции"
-#   - name: name
-#     description: "Название промо акции"
-#   - name: promo_type
-#     description: "Тип промо акции"
-#   - name: material
-#     description: "Уникальный индетификатор товара"
-#   - name: discount
-#     description: "Величина скидки"
+- name: promos
+  description: "{{ doc('promos_stg') }}"
+  columns:
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: hash_diff
+    description: "Хэш сумма по колонкам ['name', 'promo_type', 'material', 'discount']"
+  - name: name
+    description: "Название промо акции"
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: discount
+    description: "Величина скидки"
 
 - name: stores
   description: "{{ doc('stores_stg') }}"
