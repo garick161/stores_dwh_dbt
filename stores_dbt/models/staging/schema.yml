@@ -1,5 +1,7 @@
 version: 2
 
+description: "{{ doc('staging_schema_description') }}"
+
 models:
 - name: bills_item_stg
   description: "{{ doc('bills_item_stg') }}"

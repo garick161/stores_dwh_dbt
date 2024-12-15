@@ -1,5 +1,7 @@
 version: 2
 
+description: "{{ doc('dds_schema_description') }}"
+
 models:
 - name: bills_item
   description: "{{ doc('bills_item_stg') }}"
