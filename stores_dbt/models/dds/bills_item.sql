@@ -15,7 +15,7 @@ select
 	tax::numeric(17, 2),
 	rpa_sat::numeric(17, 2),
 	calday 
-from {{ ref('staging.bills_item') }}
+from {{ ref('bills_item_stg') }}
 {% if is_incremental() %}
 {% endif %}
 

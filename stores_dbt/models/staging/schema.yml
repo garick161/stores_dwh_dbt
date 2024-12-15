@@ -1,7 +1,7 @@
 version: 2
 
 models:
-- name: bills_item
+- name: bills_item_stg
   description: "{{ doc('bills_item_stg') }}"
   columns:
   - name: billnum
@@ -21,7 +21,7 @@ models:
   - name: calday
     description: "Дата операции"
 
-- name: bills_head
+- name: bills_head_stg
   description: "{{ doc('bills_head_stg') }}"
   columns:
   - name: billnum
@@ -31,7 +31,7 @@ models:
   - name: calday
     description: "Дата операции"
 
-- name: traffic
+- name: traffic_stg
   description: "{{ doc('traffic_stg') }}"
   columns:
   - name: plant
@@ -45,7 +45,7 @@ models:
   - name: quantity
     description: "Количество посетителей"
 
-- name: coupons
+- name: coupons_stg
   description: "{{ doc('coupons_stg') }}"
   columns:
   - name: plant
@@ -61,7 +61,7 @@ models:
   - name: billnum
     description: "Номер чека"
 
-- name: promos
+- name: promos_stg
   description: "{{ doc('promos_stg') }}"
   columns:
   - name: promo_id
@@ -75,7 +75,7 @@ models:
   - name: discount
     description: "Величина скидки"
 
-- name: stores
+- name: stores_stg
   description: "{{ doc('stores_stg') }}"
   columns:
   - name: plant
@@ -83,7 +83,7 @@ models:
   - name: txt
     description: "Название магазина"
 
-- name: promo_types
+- name: promo_types_stg
   description: "{{ doc('promo_types_stg') }}"
   columns:
   - name: promo_type
