@@ -1,4 +1,4 @@
-"billnum","billitem","material","qty","netval","tax","rpa_sat","calday"
+billnum,billitem,material,qty,netval,tax,rpa_sat,calday
 901095325,2,7000009745,1,80.83,16.17,97.00,2021-02-16
 900917000,11,1000048574,1,1010.83,202.17,1213.00,2021-02-03
 906486776,3,2037790002,1,33.33,6.67,40.00,2021-01-12

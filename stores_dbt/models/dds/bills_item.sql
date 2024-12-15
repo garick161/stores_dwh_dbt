@@ -6,6 +6,7 @@
         post_hook="{{ update_load_info_after_dds('bills_item') }}")
  }}
 
+-- Инкрементальная загрузка дельты для таблицы bills_item в слой DDS
 select
 	billnum::bigint,
 	billitem::bigint,

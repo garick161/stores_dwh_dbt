@@ -39,7 +39,7 @@ def loader(load_date: str) -> None:
     """Функция загрузки таблиц на текущую дату"""
 
     tables = ["bills_item", "bills_head", "traffic", "coupons", "promos"]
-    dfs = {}
+    dfs = {}  # example {'name_df': pd.DataFrame}
     connection_string = f"postgresql+psycopg2://{TARGET_DB_USER}:{TARGET_DB_PASSWORD}@{TARGET_DB_HOST}:{TARGET_DB_PORT}/{TARGET_DB_NAME}"
     engine = create_engine(connection_string)
 

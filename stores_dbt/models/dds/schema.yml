@@ -1,0 +1,92 @@
+version: 2
+
+models:
+- name: bills_item
+  description: "{{ doc('bills_item_stg') }}"
+  columns:
+  - name: billnum
+    description: "Номер чека"
+  - name: billitem
+    description: "Позиция в чеке. Одна позиция для одного товара 'material'"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: qty
+    description: "Количество"
+  - name: netval
+    description: "Стоимость без НДС"
+  - name: tax
+    description: "Добавленная стоимость"
+  - name: rpa_sat
+    description: "Стоимость с НДС"
+  - name: calday
+    description: "Дата операции"
+
+- name: bills_head
+  description: "{{ doc('bills_head_stg') }}"
+  columns:
+  - name: billnum
+    description: "Номер чека"
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
+
+- name: traffic
+  description: "{{ doc('traffic_stg') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
+  - name: time
+    description: "Время. Значения кратные часу от 8 до 21"
+  - name: frame_id
+    description: "Временной фрейм"
+  - name: quantity
+    description: "Количество посетителей"
+
+- name: coupons
+  description: "{{ doc('coupons_stg') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: calday
+    description: "Дата операции"
+  - name: coupon_id
+    description: "Индетификационный номер купона"
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: billnum
+    description: "Номер чека"
+
+- name: promos
+  description: "{{ doc('promos_stg') }}"
+  columns:
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: name
+    description: "Название промо акции"
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: discount
+    description: "Величина скидки"
+
+- name: stores
+  description: "{{ doc('stores_stg') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: txt
+    description: "Название магазина"
+
+- name: promo_types
+  description: "{{ doc('promo_types_stg') }}"
+  columns:
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: txt
+    description: "Каким образом применяется скидка. Например, в абсолютном выражении или в относительном в виде процента скидки"
