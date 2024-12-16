@@ -1,0 +1,26 @@
+version: 2
+
+snapshots:
+- name: promos_snapshot
+  description: "{{ doc('promos_snapshot') }}"
+  columns:
+  - name: promo_id
+    description: "Индетификационный номер промо акции"
+  - name: hash_diff
+    description: "Хэш сумма по колонкам ['name', 'promo_type', 'material', 'discount']"
+  - name: name
+    description: "Название промо акции"
+  - name: promo_type
+    description: "Тип промо акции"
+  - name: material
+    description: "Уникальный индетификатор товара"
+  - name: discount
+    description: "Величина скидки"
+  - name: dbt_scd_id
+    description: "Служебное поле DBT для индетификации записи"
+  - name: dbt_updated_at
+    description: "Служебное поле DBT. Время последнего изменения записи"
+  - name: dbt_valid_from
+    description: "Служебное поле DBT для реализации SCD 2. Время начала актуальности записи"
+  - name: dbt_valid_to
+    description: "Служебное поле DBT для реализации SCD 2. Время окончания актуальности записи. Null - запись актуальна на сегоднишний день"
