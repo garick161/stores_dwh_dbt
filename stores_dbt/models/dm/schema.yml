@@ -1,0 +1,66 @@
+version: 2
+
+models:
+- name: bills_count
+  description: "{{ doc('bills_count') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: bills_count
+    description: "Количество чеков по магазинам "
+
+- name: total_traffic
+  description: "{{ doc('total_traffic') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: total_traffic
+    description: "Общий трафик по магазинам "
+
+- name: total_amount_count
+  description: "{{ doc('total_amount_count') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: total_amount
+    description: "Общий оброт по магазинам "
+  - name: total_item_count
+    description: "Общее количество товаров проданных в магазинах "
+
+- name: total_discount_amount_count
+  description: "{{ doc('total_discount_amount_count') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: total_discount_amount
+    description: "Сумма скидки по магазинам "
+  - name: count_item_discount
+    description: "Общее количество товаров проданных со скидкой в магазинах "
+
+- name: final_mart
+  description: "{{ doc('final_mart') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: total_amount
+    description: "Общий оброт по магазинам "
+  - name: total_discount_amount
+    description: "Сумма скидки по магазинам "
+  - name: total_without_discount
+    description: "Общий оброт по магазинам с учетом скидок"
+  - name: total_item_count
+    description: "Общее количество товаров проданных в магазинах "
+  - name: bills_count
+    description: "Количество чеков по магазинам "
+  - name: total_traffic
+    description: "Общий трафик по магазинам "
+  - name: total_item_discount
+    description: "Общее количество товаров проданных со скидкой в магазинах "
+  - name: discount_item_rate
+    description: "Доля товаров со скидкой в процентах"
+  - name: avg_items_in_bill
+    description: "Среднее количество товаров в чеке"
+  - name: conversion_rate
+    description: "Коэффициент конверсии в процентах"
+  - name: avg_revenue_per_customer
+    description: "Средняя выручка на покупателя"
