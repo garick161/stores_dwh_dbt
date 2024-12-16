@@ -1,6 +1,10 @@
+-- Модель для формирования итоговой витрины
+-- Название витрины формируется динамически по правилу:
+-- order_date_from_date_to согласно переданным параметрам при запуске dbt модели
 
+{% set view_name = 'order_' ~ var('date_from') ~ '_' ~ var('date_to') %}
 
-{{ config(schema='dm', materialized='view') }}
+{{ config(schema='dm', materialized='view', alias=view_name) }}
 
 select tdcdi.plant, taic.total_amount, tdcdi.total_discount_amount,
 		taic.total_amount - tdcdi.total_discount_amount as total_without_discount,
