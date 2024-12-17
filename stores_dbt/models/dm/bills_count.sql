@@ -1,4 +1,4 @@
-{{ config(schema='dm', materialized='view') }}
+{{ config(schema='dm', materialized='ephemeral') }}
 	
 SELECT plant, count(billnum) AS bills_count
 FROM {{ ref('bills_head') }} bh

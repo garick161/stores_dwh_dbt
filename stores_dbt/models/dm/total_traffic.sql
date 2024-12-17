@@ -1,4 +1,4 @@
-{{ config(schema='dm', materialized='view') }}
+{{ config(schema='dm', materialized='ephemeral') }}
 
 SELECT plant, sum(quantity) AS total_traffic 
 FROM {{ ref('traffic') }}

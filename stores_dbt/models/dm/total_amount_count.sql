@@ -1,4 +1,4 @@
-{{ config(schema='dm', materialized='view') }}
+{{ config(schema='dm', materialized='ephemeral') }}
 
 select bh.plant, sum(bi.rpa_sat) as total_amount, sum(bi.qty) as total_item_count
 from {{ ref('bills_head') }} bh

@@ -1,4 +1,4 @@
-{{ config(schema='dm', materialized='view') }}
+{{ config(schema='dm', materialized='ephemeral') }}
 
 select plant, sum(discount_amount) as total_discount_amount, count(*) as count_item_discount
 from (
