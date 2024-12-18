@@ -4,7 +4,7 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      -name: Print to console
+      - name: Print to console
         run: echo "Hello Work Flow"
         
         
