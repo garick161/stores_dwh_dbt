@@ -1,0 +1,10 @@
+name: Test Flow
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print to console
+        run: echo "Hello Work Flow"
+        
+        
