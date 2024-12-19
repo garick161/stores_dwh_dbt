@@ -6,7 +6,7 @@ import yaml
 from sqlalchemy import create_engine
 
 # Получим данные о подключению к БД из конфигурационного файла
-with open("../config.yml", "r") as file:
+with open("../.config.yml", "r") as file:
     config = yaml.safe_load(file)
 
 TARGET_DB_HOST = config["target_db"]["host"]

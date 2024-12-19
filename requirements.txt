@@ -1,7 +1,13 @@
-pre-commit==4.0.1
-autoflake==2.3.1
-black==24.10.0
-reorder-python-imports==3.14.0
+# psycopg2==2.9.10
+pandas==2.2.3
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+dbt-core==1.7.18
+dbt-postgres==1.7.18
+# pre-commit==4.0.1
+# autoflake==2.3.1
+# black==24.10.0
+# reorder-python-imports==3.14.0
 # flake8==7.1.1
 # flake8-annotations==3.1.1
 # flake8-annotations-coverage==0.0.6
@@ -19,11 +25,5 @@ reorder-python-imports==3.14.0
 # flake8-string-format==0.3.0
 # flake8-unused-arguments==0.0.13
 # yesqa==1.5.0
-psycopg2==2.9.10
-pandas==2.2.3
-sqlalchemy==2.0.36
-psycopg2-binary==2.9.10
-dbt-core==1.7.18
-dbt-postgres==1.7.18
-sqlfluff
-sqlfluff-templater-dbt
+# sqlfluff
+# sqlfluff-templater-dbt
