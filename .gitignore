@@ -1,3 +1,4 @@
+bash_scripts/crone_dbt.log
 venv/
 .pre-commit-config.yaml
 .config.yml

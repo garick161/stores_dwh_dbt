@@ -63,5 +63,5 @@ def loader(load_date: str) -> None:
 
 if __name__ == "__main__":
     load_date = get_loaded_date()
-    print(f"Дата загрузки: {load_date}")
     loader(load_date)
+    print(load_date)
