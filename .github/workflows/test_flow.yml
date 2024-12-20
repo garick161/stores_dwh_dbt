@@ -1,10 +1,18 @@
 name: Test Flow
-on: workflow_dispatch
+on: push
 jobs:
-  print:
+  deploy_to_prod:
     runs-on: ubuntu-latest
     steps:
-      - name: Print to console
-        run: echo "Hello Work Flow"
-        
-        
+    - name: Set up SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H your.server.ip >> ~/.ssh/known_hosts 
+
+    - name: add new test file
+      run: |
+        ssh user@your.server.ip 
+        cd /root/stores_dwh_dbt
+        git pull
