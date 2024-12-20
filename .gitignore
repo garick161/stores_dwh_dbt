@@ -1,4 +1,5 @@
 bash_scripts/crone_dbt.log
+py_stripts/temp.ipynb
 venv/
 .pre-commit-config.yaml
 .config.yml
