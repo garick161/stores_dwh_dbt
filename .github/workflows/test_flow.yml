@@ -17,6 +17,7 @@ jobs:
       run: |
         echo 'start add new test file'
         ssh -o StrictHostKeyChecking=no root@194.32.248.28
+        pwd
         echo "Checking permissions for /root/stores_dwh_dbt"
         sudo ls -ld /root/stores_dwh_dbt
         if [ -r /root/stores_dwh_dbt ]; then
