@@ -6,13 +6,17 @@ jobs:
     steps:
     - name: Set up SSH
       run: |
+        echo 'Start Set up SSH'
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H 194.32.248.28 >> ~/.ssh/known_hosts 
+        echo 'end Set up SSH'
 
     - name: add new test file
       run: |
+        echo 'start add new test file'
         ssh root@194.32.248.28
         cd /root/stores_dwh_dbt
         git pull
+        echo 'end add new test file'
