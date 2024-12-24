@@ -17,6 +17,6 @@ jobs:
       run: |
         echo 'start add new test file'
         ssh -o StrictHostKeyChecking=no root@194.32.248.28 << 'EOF'
-        pwd
+        cd stores_dwh_dbt/
         ls
         EOF
