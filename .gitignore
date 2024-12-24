@@ -1,9 +1,10 @@
 bash_scripts/crone_dbt.log
+bash_scripts/daily_load_task.sh
 py_stripts/temp.ipynb
 venv/
 .pre-commit-config.yaml
 .config.yml
-py_stripts/temp.ipynb
+
 # dbt specific
 stores_dbt/target/
 stores_dbt/dbt_packages/
