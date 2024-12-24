@@ -16,13 +16,7 @@ jobs:
     - name: add new test file
       run: |
         echo 'start add new test file'
-        ssh -o StrictHostKeyChecking=no root@194.32.248.28
+        ssh -o StrictHostKeyChecking=no root@194.32.248.28 << 'EOF'
         pwd
         ls
-        cd ..
-        pwd
-        ls
-        cd ..
-        pwd
-        ls
-        echo 'end add new test file'
+        EOF
