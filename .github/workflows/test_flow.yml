@@ -16,7 +16,19 @@ jobs:
     - name: add new test file
       run: |
         echo 'start add new test file'
-        ssh root@194.32.248.28
-        cd /root/stores_dwh_dbt
+        ssh -o StrictHostKeyChecking=no root@194.32.248.28
+        echo "Checking permissions for /root/stores_dwh_dbt"
+        ls -ld /root/stores_dwh_dbt
+        if [ -r /root/stores_dwh_dbt ]; then
+          echo "Directory is readable"
+        else
+          echo "Directory is not readable"
+        fi
+        if [ -x /root/stores_dwh_dbt ]; then
+          echo "Directory is executable"
+        else
+          echo "Directory is not executable"
+        fi
+        cd /root/stores_dwh_dbt || { echo "Failed to change directory"; exit 1; }
         git pull
         echo 'end add new test file'
