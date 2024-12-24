@@ -1,5 +1,5 @@
 name: Test Flow
-on: push
+on: workflow_dispatch
 jobs:
   deploy_to_prod:
     runs-on: ubuntu-latest
