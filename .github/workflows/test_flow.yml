@@ -18,5 +18,6 @@ jobs:
         echo 'start add new test file'
         ssh -o StrictHostKeyChecking=no root@194.32.248.28
         pwd
+        ls
         git pull
         echo 'end add new test file'
