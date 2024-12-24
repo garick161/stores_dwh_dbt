@@ -9,10 +9,10 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H your.server.ip >> ~/.ssh/known_hosts 
+        ssh-keyscan -H 194.32.248.28 >> ~/.ssh/known_hosts 
 
     - name: add new test file
       run: |
-        ssh user@your.server.ip 
+        ssh root@194.32.248.28
         cd /root/stores_dwh_dbt
         git pull
