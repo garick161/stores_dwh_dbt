@@ -1,0 +1,24 @@
+[0m15:08:21  Running with dbt=1.7.18
+[0m15:08:22  Encountered an error:
+[Errno 98] Address already in use
+[0m15:08:22  Traceback (most recent call last):
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 169, in wrapper
+    return func(*args, **kwargs)
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    return func(*args, **kwargs)
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 245, in wrapper
+    return func(*args, **kwargs)
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/cli/main.py", line 325, in docs_serve
+    results = task.run()
+  File "/root/stores_dwh_dbt/venv/lib/python3.10/site-packages/dbt/task/serve.py", line 24, in run
+    with socketserver.TCPServer((host, port), SimpleHTTPRequestHandler) as httpd:
+  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
