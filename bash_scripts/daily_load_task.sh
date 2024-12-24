@@ -3,6 +3,7 @@
 # Переходим директорию проекта и активируем виртуальное окружение
 cd /root/stores_dwh_dbt/
 source venv/bin/activate
+
 # Переходим в директорию, где инициорован dbt проект
 cd stores_dbt
 
