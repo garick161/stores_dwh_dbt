@@ -18,5 +18,6 @@ jobs:
         echo 'start add new test file'
         ssh -o StrictHostKeyChecking=no root@194.32.248.28 << 'EOF'
         cd stores_dwh_dbt/
-        ls
+        git pull
         EOF
+        echo 'end add new test file'
