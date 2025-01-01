@@ -39,6 +39,10 @@ models:
 
 - name: traffic_stg
   description: "{{ doc('traffic_stg') }}"
+  tests:
+  - check_plant_zero_traffic:
+      config:
+        severity: warn
   columns:
   - name: plant
     description: "Индетификационный номер магазина"
