@@ -22,6 +22,8 @@ models:
     description: "Стоимость с НДС"
   - name: calday
     description: "Дата операции"
+    tests:
+    - check_date
 
 - name: bills_head_stg
   description: "{{ doc('bills_head_stg') }}"
@@ -32,6 +34,8 @@ models:
     description: "Индетификационный номер магазина"
   - name: calday
     description: "Дата операции"
+    tests:
+    - check_date
 
 - name: traffic_stg
   description: "{{ doc('traffic_stg') }}"
@@ -40,6 +44,8 @@ models:
     description: "Индетификационный номер магазина"
   - name: calday
     description: "Дата операции"
+    tests:
+    - check_date
   - name: time
     description: "Время. Значения кратные часу от 8 до 21"
   - name: frame_id
