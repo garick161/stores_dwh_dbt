@@ -18,5 +18,5 @@ Try running the following commands:
 dbt build --vars '{"date_from": "2021-01-13", "date_to": "2021-01-14"}' --store-failures
 
 тесты:
-- calday >= current day
-- plant zero traffic
+- calday >= current day (error)
+- plant zero traffic (warning)

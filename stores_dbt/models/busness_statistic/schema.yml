@@ -1,0 +1,12 @@
+version: 2
+
+models:
+- name: plant_revenue_avg
+  description: "{{ doc('plant_revenue_avg') }}"
+  columns:
+  - name: plant
+    description: "Индетификационный номер магазина"
+  - name: avg_revenue
+    description: "Средняя дневная выручка по магазинам"
+  - name: std_revenue
+    description: "Стандартное отклонение дневной выручки по магазинам"

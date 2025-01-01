@@ -3,6 +3,10 @@ version: 2
 models:
 - name: bills_item
   description: "{{ doc('bills_item_stg') }}"
+  tests:
+  - check_daily_revenue:
+      config:
+        severity: warn
   columns:
   - name: billnum
     description: "Номер чека"
