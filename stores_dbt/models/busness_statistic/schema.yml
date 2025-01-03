@@ -8,5 +8,5 @@ models:
     description: "Индетификационный номер магазина"
   - name: avg_revenue
     description: "Средняя дневная выручка по магазинам"
-  - name: std_revenue
-    description: "Стандартное отклонение дневной выручки по магазинам"
+  - name: double_std_revenue
+    description: "Двойное стандартное отклонение дневной выручки по магазинам"
