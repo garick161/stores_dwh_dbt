@@ -15,9 +15,16 @@ jobs:
 
     - name: add new test file
       run: |
-        echo 'start add new test file'
+        echo 'load changes to prod server'
         ssh -o StrictHostKeyChecking=no root@194.32.248.28 << 'EOF'
         cd stores_dwh_dbt/
         git pull
+        echo 'loading is successful'
+        echo 'restart dbt docs'
+        source venv/bin/activate
+        cd stores_dbt
+        dbt docs generate
+        echo 'restart dbt docs demon'
+        sudo systemctl restart dbt_serve.service
+        echo 'docs is available on http://194.32.248.28:8081'
         EOF
-        echo 'end add new test file'
